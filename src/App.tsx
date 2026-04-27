@@ -53,6 +53,7 @@ function Nav({ t, lang, setLang }: NavProps) {
           <VoltaWordmark height={20} />
         </a>
         <div
+          className="nav-mid"
           style={{
             display: "flex",
             alignItems: "center",
@@ -96,14 +97,14 @@ function Nav({ t, lang, setLang }: NavProps) {
           </div>
           <a
             href="#"
-            className="btn btn-ghost"
+            className="btn btn-ghost nav-login"
             style={{ height: 36, padding: "0 12px" }}
           >
             {t.nav.login}
           </a>
           <a
             href="#waitlist"
-            className="btn btn-primary"
+            className="btn btn-primary nav-cta"
             style={{ height: 36 }}
           >
             {t.nav.waitlist}
