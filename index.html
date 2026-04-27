@@ -3,7 +3,92 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Volta — Conversational Mixing for Pros</title>
+
+    <!-- Primary -->
+    <title>Volta — DAW 안의 대화형 믹싱 에이전트</title>
+    <meta
+      name="description"
+      content="Volta는 Ableton·Cubase·Logic Pro 안에서 동작하는 대화형 믹싱 에이전트입니다. 자연어 지시로 트랙과 디바이스 파라미터를 멀티트랙으로 동시에 조정하세요. Q3 2026 베타 모집 중."
+    />
+    <meta
+      name="keywords"
+      content="Volta, AI mixing, 대화형 믹싱, conversational mixing, Ableton Live, Cubase, Logic Pro, VST3, AU, AAX, multitrack, 믹싱 에이전트, BlackCoconut"
+    />
+    <meta name="author" content="Volta Audio Inc." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <!-- Search engine site verification -->
+    <meta
+      name="naver-site-verification"
+      content="ab51778724c7384995a6d426617a2ba4beba77f4"
+    />
+    <!-- <meta name="google-site-verification" content="" /> -->
+
+    <meta
+      name="theme-color"
+      content="#1a1f21"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta
+      name="theme-color"
+      content="#f4f6f6"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Canonical & i18n -->
+    <link rel="canonical" href="https://volta.blackcoconut.kr/" />
+    <link rel="alternate" hreflang="ko" href="https://volta.blackcoconut.kr/" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://volta.blackcoconut.kr/?lang=en"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://volta.blackcoconut.kr/"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Volta" />
+    <meta property="og:title" content="Volta — DAW 안의 대화형 믹싱 에이전트" />
+    <meta
+      property="og:description"
+      content="Ableton·Cubase·Logic Pro 안에서 동작하는 대화형 믹싱 에이전트. 자연어 지시로 트랙·디바이스 파라미터를 멀티트랙으로 조정하세요."
+    />
+    <meta property="og:url" content="https://volta.blackcoconut.kr/" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:image" content="https://volta.blackcoconut.kr/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Volta — Conversational Mixing for Pros"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Volta — DAW 안의 대화형 믹싱 에이전트"
+    />
+    <meta
+      name="twitter:description"
+      content="Ableton·Cubase·Logic Pro 안의 대화형 믹싱 에이전트. Q3 2026 베타."
+    />
+    <meta name="twitter:image" content="https://volta.blackcoconut.kr/og.png" />
+
+    <!-- Icons -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
@@ -15,9 +100,52 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
     />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://volta.blackcoconut.kr/#org",
+            "name": "Volta Audio Inc.",
+            "url": "https://volta.blackcoconut.kr/",
+            "logo": "https://volta.blackcoconut.kr/og.png",
+            "sameAs": []
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://volta.blackcoconut.kr/#site",
+            "url": "https://volta.blackcoconut.kr/",
+            "name": "Volta",
+            "inLanguage": ["ko-KR", "en-US"],
+            "publisher": { "@id": "https://volta.blackcoconut.kr/#org" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Volta",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "macOS, Windows",
+            "description": "Conversational mixing agent for Ableton Live, Cubase, and Logic Pro.",
+            "url": "https://volta.blackcoconut.kr/",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/PreOrder"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      Volta 랜딩 페이지를 보려면 JavaScript가 필요합니다. — Volta requires
+      JavaScript.
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -119,6 +119,8 @@ const LANG_STORAGE_KEY = "volta.lang";
 
 function detectInitialLang(): Lang {
   if (typeof window === "undefined") return "ko";
+  const qs = new URLSearchParams(window.location.search).get("lang");
+  if (qs === "ko" || qs === "en") return qs;
   const saved = window.localStorage.getItem(LANG_STORAGE_KEY);
   if (saved === "ko" || saved === "en") return saved;
   const nav = window.navigator.language || "";
@@ -132,10 +134,18 @@ export default function App() {
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.setAttribute("data-theme", "dark");
+    document.title =
+      lang === "ko"
+        ? "Volta — DAW 안의 대화형 믹싱 에이전트"
+        : "Volta — Conversational Mixing for Pros";
     try {
       window.localStorage.setItem(LANG_STORAGE_KEY, lang);
+      const url = new URL(window.location.href);
+      if (lang === "en") url.searchParams.set("lang", "en");
+      else url.searchParams.delete("lang");
+      window.history.replaceState(null, "", url.toString());
     } catch {
-      /* ignore storage errors */
+      /* ignore storage / URL errors */
     }
   }, [lang]);
 
