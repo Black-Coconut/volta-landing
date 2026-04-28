@@ -75,10 +75,11 @@ export function DAWStrip({ t }: SectionProps) {
 export function IntentSection({ t }: SectionProps) {
   return (
     <section
+      className="section-tall"
       style={{ padding: "120px 0", borderBottom: "1px solid var(--line-soft)" }}
     >
       <div
-        className="container"
+        className="container split-2"
         style={{
           display: "grid",
           gridTemplateColumns: "minmax(0,1fr) minmax(0,1.05fr)",
@@ -130,7 +131,7 @@ export function IntentSection({ t }: SectionProps) {
           </ul>
         </div>
 
-        <div className="surface" style={{ padding: 28 }}>
+        <div className="surface surface-pad-lg" style={{ padding: 28 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             <div>
               <div
@@ -192,6 +193,7 @@ export function IntentSection({ t }: SectionProps) {
               </div>
             </div>
             <div
+              className="grid-2-cards"
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
@@ -326,10 +328,12 @@ export function MultitrackSection({ t }: SectionProps) {
   ];
   return (
     <section
+      className="section-tall"
       style={{ padding: "120px 0", borderBottom: "1px solid var(--line-soft)" }}
     >
       <div className="container">
         <div
+          className="split-2"
           style={{
             display: "grid",
             gridTemplateColumns: "minmax(0,1fr) minmax(0,1.6fr)",
@@ -337,7 +341,10 @@ export function MultitrackSection({ t }: SectionProps) {
             alignItems: "start",
           }}
         >
-          <div style={{ position: "sticky", top: 80 }}>
+          <div
+            className="release-sticky"
+            style={{ position: "sticky", top: 80 }}
+          >
             <div className="eyebrow">{t.multitrack.eyebrow}</div>
             <h2 className="serif" style={{ marginTop: 18 }}>
               {t.multitrack.title}
@@ -409,6 +416,7 @@ export function MultitrackSection({ t }: SectionProps) {
               {tracks.map((tr, i) => (
                 <div
                   key={i}
+                  className="track-row"
                   style={{
                     display: "grid",
                     gridTemplateColumns: "44px 140px 1fr 80px",
@@ -543,10 +551,12 @@ export function CompareSection({ t }: SectionProps) {
 
   return (
     <section
+      className="section-tall"
       style={{ padding: "120px 0", borderBottom: "1px solid var(--line-soft)" }}
     >
       <div className="container">
         <div
+          className="split-2"
           style={{
             display: "grid",
             gridTemplateColumns: "minmax(0, 1.4fr) minmax(0, 1fr)",
@@ -562,6 +572,7 @@ export function CompareSection({ t }: SectionProps) {
             </h2>
           </div>
           <p
+            className="mobile-text-left"
             style={{
               color: "var(--fg-2)",
               fontSize: 16,
@@ -708,6 +719,7 @@ export function CompareSection({ t }: SectionProps) {
         </div>
 
         <div
+          className="split-2"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
@@ -799,6 +811,7 @@ export function HowSection({ t }: SectionProps) {
   return (
     <section
       id="how"
+      className="section-tall"
       style={{ padding: "120px 0", borderBottom: "1px solid var(--line-soft)" }}
     >
       <div className="container">
@@ -807,6 +820,7 @@ export function HowSection({ t }: SectionProps) {
           {t.how.title}
         </h2>
         <div
+          className="grid-4"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4, 1fr)",
@@ -860,6 +874,7 @@ export function HowSection({ t }: SectionProps) {
 export function CasesSection({ t }: SectionProps) {
   return (
     <section
+      className="section-tall"
       style={{ padding: "120px 0", borderBottom: "1px solid var(--line-soft)" }}
     >
       <div className="container">
@@ -868,6 +883,7 @@ export function CasesSection({ t }: SectionProps) {
           {t.cases.title}
         </h2>
         <div
+          className="grid-3"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
@@ -921,10 +937,12 @@ export function PricingSection({ t }: SectionProps) {
   return (
     <section
       id="pricing"
+      className="section-tall"
       style={{ padding: "120px 0", borderBottom: "1px solid var(--line-soft)" }}
     >
       <div className="container">
         <div
+          className="split-2"
           style={{
             display: "grid",
             gridTemplateColumns: "minmax(0, 1.4fr) minmax(0, 1fr)",
@@ -940,6 +958,7 @@ export function PricingSection({ t }: SectionProps) {
             </h2>
           </div>
           <p
+            className="mobile-text-left"
             style={{
               color: "var(--fg-2)",
               fontSize: 16,
@@ -952,6 +971,7 @@ export function PricingSection({ t }: SectionProps) {
           </p>
         </div>
         <div
+          className="grid-3"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",
@@ -1056,10 +1076,11 @@ export function FAQSection({ t }: SectionProps) {
   return (
     <section
       id="faq"
+      className="section-tall"
       style={{ padding: "120px 0", borderBottom: "1px solid var(--line-soft)" }}
     >
       <div
-        className="container"
+        className="container split-2"
         style={{
           display: "grid",
           gridTemplateColumns: "minmax(0,1fr) minmax(0,2fr)",
@@ -1067,7 +1088,7 @@ export function FAQSection({ t }: SectionProps) {
           alignItems: "start",
         }}
       >
-        <div style={{ position: "sticky", top: 80 }}>
+        <div className="release-sticky" style={{ position: "sticky", top: 80 }}>
           <div className="eyebrow">{t.faq.eyebrow}</div>
           <h2 className="serif" style={{ marginTop: 18 }}>
             {t.faq.title}
@@ -1197,6 +1218,7 @@ export function WaitlistSection({ t }: SectionProps) {
             placeholder={t.cta.placeholder}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className="waitlist-input"
             style={{
               minWidth: 320,
               height: 48,
@@ -1262,6 +1284,7 @@ export function Footer({ t }: SectionProps) {
     <footer style={{ padding: "72px 0 40px" }}>
       <div className="container">
         <div
+          className="footer-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1.4fr repeat(4, 1fr)",

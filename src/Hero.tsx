@@ -206,10 +206,11 @@ export function Hero({ t, lang }: HeroProps) {
         }}
       />
       <div
-        className="container"
+        className="container hero-pad"
         style={{ position: "relative", paddingTop: 88, paddingBottom: 88 }}
       >
         <div
+          className="split-2"
           style={{
             display: "grid",
             gridTemplateColumns: "minmax(0,1fr) minmax(0,1.05fr)",
@@ -237,6 +238,7 @@ export function Hero({ t, lang }: HeroProps) {
               </em>
             </h1>
             <p
+              className="mobile-fluid"
               style={{
                 marginTop: 24,
                 color: "var(--fg-2)",
@@ -248,6 +250,7 @@ export function Hero({ t, lang }: HeroProps) {
               {t.hero.sub}
             </p>
             <div
+              className="hero-cta-row"
               style={{
                 display: "flex",
                 gap: 10,
@@ -406,6 +409,7 @@ export function Hero({ t, lang }: HeroProps) {
                 {cur.tracks.map((tr, i) => (
                   <div
                     key={i}
+                    className="proposal-row"
                     style={{
                       display: "grid",
                       gridTemplateColumns: "120px 1fr auto",
